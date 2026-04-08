@@ -1,55 +1,48 @@
 # 📊 US Superstore Sales Analysis (SQL & Business Insights)
 
 ## 💡 Impact Statement
-> **Turning raw sales data into actionable business decisions using SQL.**
+> **Turning raw sales data into actionable business decisions using SQL Server.**
 
 ---
 
 ## 📝 Project Overview
-This project analyzes US Superstore sales data using **SQL Server** to uncover key business insights. The objective is to transform raw data into meaningful patterns related to customer behavior, product performance, and sales trends.
+This project focuses on analyzing sales data from a US Superstore. Using **SQL (T-SQL)**, I performed data cleaning, transformation, and exploratory data analysis to uncover trends in profitability, customer segments, and regional performance.
 
 ---
 
-## 🛠️ Skills & Tools Used
-* **SQL Server (T-SQL):** Data cleaning, joins, aggregations, and subqueries.
-* **Data Transformation:** Converting raw data into structured formats (Date, Numeric).
-* **Business Analysis:** Customer segmentation and seasonal trend analysis.
+## 💡 Key Business Insights (Visual Evidence)
+
+### 1. Yearly Revenue Performance
+Analysis showing the revenue growth and fluctuations from 2015 to 2018.
+![Yearly Sales](Yearly%20Revenue%20Analysis.png)
+
+### 2. Product Performance (The Revenue Engines)
+* **Top Performers:** Phones and Chairs dominate the revenue stream.
+![Top Products](Top%205%20Revenue-Generating%20Sub-Categories.png)
+
+* **Low Performers:** Specific categories like Fasteners and Labels require inventory strategy changes.
+![Bottom Products](Bottom%205%20Sub-Categories%20(Underperformers).png)
+
+### 3. Seasonal Peaks & Customer Behavior
+* High activity detected in **February and August**, driven by corporate and consumer back-to-school demands.
+![Seasonal Trends](Seasonal%20Sales%20Trends%20(Peak%20Months).png)
+
+### 4. Regional & Customer Loyalty
+* **Regional Engine:** The West and East regions contribute the most to total sales.
+![Regional Analysis](Regional%20Performance%20by%20Category.png)
+
+* **VIP Customers:** Identified top spenders like Sanjit Engle for potential loyalty rewards.
+![Top Customers](Customer%20Loyalty%20Analysis%20(Top%20Spenders).png)
 
 ---
 
-## 💡 Key Business Insights (With Numbers)
-
-### 1. Product Performance (Revenue Drivers)
-* **Top Performer:** `Phones` generated over **$322,130** in total sales, making it the leading revenue driver.
-* **High-Demand Product:** `Chairs` contributed approximately **$245,456**, indicating strong demand in the furniture segment.
-* **Underperformers:** `Fasteners` ($2,050) and `Labels` ($7,339) show minimal revenue impact.
-
-### 2. Seasonal & Segment Trends
-* **Peak Periods:** February and August show the highest sales, especially in the **Technology** category.
-* **Customer Segments:**
-    * **Corporate clients** dominate sales in February.
-    * **Consumer segment** peaks in August and December.
-
-### 3. Regional & Operational Highlights
-* **Top Regions:**
-    * **West:** $725k+ 
-    * **East:** $678k+
-* **Shipping Insights:**
-    * **Standard Class:** 5,859 orders (most used).
-    * **First Class:** Higher average order value ($254).
+## 🚀 Strategic Recommendations
+1. **Focus on Tech:** Double down on marketing for "Phones" during the August peak.
+2. **Optimize West Region:** Expand Furniture inventory in the West to meet high demand.
+3. **Retention Program:** Launch a loyalty program for the top identified high-value customers.
 
 ---
 
-## 🚀 Strategic Recommendations (Business Actions)
-
-* **Inventory Optimization:** Reduce stock for low-performing products (e.g., Fasteners, Labels) or bundle them with high-demand items.
-* **Targeted Marketing:** Focus campaigns on high-performing products like `Phones` during peak months (February & August).
-* **Regional Strategy:** Increase furniture promotions and inventory in the **West region** due to strong demand.
-* **Customer Retention:** Introduce a VIP loyalty program targeting high-value customers (e.g., those spending over **$19,000+**) to increase long-term revenue.
-
----
-
-## 💻 How to Run the Analysis
-1. Import `train.csv` into Microsoft SQL Server.
-2. Run the `Superstore_Analysis.sql` script.
-3. Query the `superstore_clean` table for structured insights.
+## 💻 How to Use
+1. Import the dataset into SQL Server.
+2. Run the `Superstore_Analysis.sql` script provided in this repository.
