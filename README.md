@@ -1,48 +1,52 @@
-# 📊 US Superstore Sales Analysis (SQL & Business Insights)
+# 📊 US Superstore: End-to-End Sales Analysis (SQL & Power BI)
 
 ## 💡 Impact Statement
-> **Turning raw sales data into actionable business decisions using SQL Server.**
+> **Transforming raw transactional data into high-level executive insights through SQL processing and Interactive Visualization.**
 
 ---
 
 ## 📝 Project Overview
-This project focuses on analyzing sales data from a US Superstore. Using **SQL (T-SQL)**, I performed data cleaning, transformation, and exploratory data analysis to uncover trends in profitability, customer segments, and regional performance.
+This project is a complete data journey. It starts with **SQL Server (T-SQL)** for deep-dive data cleaning and exploratory analysis, and culminates in a **Power BI Executive Dashboard** for real-time strategic decision-making.
 
 ---
 
-## 💡 Key Business Insights (Visual Evidence)
+## 🎨 Phase 1: Executive Dashboard (Power BI)
+*The final interactive layer where business health is monitored at a glance.*
 
-### 1. Yearly Revenue Performance
-Analysis showing the revenue growth and fluctuations from 2015 to 2018.
-![Yearly Sales](Yearly%20Revenue%20Analysis.png)
+### **Dashboard Preview**
+![Executive Dashboard](Dashboard_Preview.png)
 
-### 2. Product Performance (The Revenue Engines)
-* **Top Performers:** Phones and Chairs dominate the revenue stream.
-![Top Products](Top%205%20Revenue-Generating%20Sub-Categories.png)
+### **Key Visual Features:**
+* **Interactive KPIs:** Total Sales ($225.83K), Orders, and Customers with dynamic filtering.
+* **Regional Insights:** Treemap analysis identifying the West and East as revenue engines.
+* **Trend Intelligence:** Area charts visualizing growth patterns from 2015 to 2018.
+* **Category Breakdown:** Donut charts showing product category distribution.
 
-* **Low Performers:** Specific categories like Fasteners and Labels require inventory strategy changes.
-![Bottom Products](Bottom%205%20Sub-Categories%20(Underperformers).png)
+---
 
-### 3. Seasonal Peaks & Customer Behavior
-* High activity detected in **February and August**, driven by corporate and consumer back-to-school demands.
-![Seasonal Trends](Seasonal%20Sales%20Trends%20(Peak%20Months).png)
+## 💻 Phase 2: SQL Data Analysis & Business Insights
+*The engine room where the data was prepared and deep-dive questions were answered.*
 
-### 4. Regional & Customer Loyalty
+### 1. Product Performance (Revenue Engines)
+* **Top Performers:** Phones (~$322K) and Chairs (~$245K) dominate the revenue stream.
+* **Low Performers:** Specific categories like Fasteners require strategy changes.
+
+### 2. Seasonal Peaks & Customer Behavior
+* High activity detected in **February and August**, driven by corporate demands.
+
+### 3. Regional & Customer Loyalty
 * **Regional Engine:** The West and East regions contribute the most to total sales.
-![Regional Analysis](Regional%20Performance%20by%20Category.png)
-
-* **VIP Customers:** Identified top spenders like Sanjit Engle for potential loyalty rewards.
-![Top Customers](Customer%20Loyalty%20Analysis%20(Top%20Spenders).png)
+* **VIP Customers:** Identified top spenders for potential loyalty rewards.
 
 ---
 
 ## 🚀 Strategic Recommendations
 1. **Focus on Tech:** Double down on marketing for "Phones" during the August peak.
 2. **Optimize West Region:** Expand Furniture inventory in the West to meet high demand.
-3. **Retention Program:** Launch a loyalty program for the top identified high-value customers.
+3. **Retention Program:** Launch a loyalty program for identified high-value customers.
 
 ---
 
-## 💻 How to Use
-1. Import the dataset into SQL Server.
-2. Run the `Superstore_Analysis.sql` script provided in this repository.
+## 🛠️ Tools Used
+* **SQL Server (T-SQL):** Data Cleaning, CTEs, and Complex Queries.
+* **Power BI Desktop:** Data Modeling, DAX, and UI/UX Design.
