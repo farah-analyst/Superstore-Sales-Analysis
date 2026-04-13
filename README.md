@@ -79,6 +79,44 @@ After conducting a comprehensive analysis using **SQL**, **Power BI**, and **Pyt
 * **Recommendation:** Implement a premium loyalty program targeting these high-value customers to ensure long-term retention and minimize churn risk.
 
 ---
+### 📊 Interactive Python Visualization
+To complement the analysis, I developed a dynamic animation showing cumulative sales growth across categories. This visualization helps in understanding the sales momentum and seasonal peaks.
+
+![Sales Growth Animation](./monthly-sales-growth-animation.gif)
+
+### 🐍 The Python Code
+The following script was used to generate the animated visualization using **Pandas** and **Plotly Express**:
+
+```python
+import pandas as pd
+import plotly.express as px
+
+# Load and clean data
+df = pd.read_csv('train.csv', encoding='latin1')
+df['Order Date'] = pd.to_datetime(df['Order Date'], dayfirst=True)
+df['Month_Year'] = df['Order Date'].dt.strftime('%Y-%m')
+
+# Create monthly aggregated data
+monthly_data = df.groupby(['Month_Year', 'Category'])['Sales'].sum().reset_index()
+
+# Build cumulative frames for smooth animation
+frames_list = []
+unique_months = sorted(monthly_data['Month_Year'].unique())
+for i, month in enumerate(unique_months):
+    temp_df = monthly_data[monthly_data['Month_Year'] <= month].copy()
+    temp_df['Frame'] = month
+    frames_list.append(temp_df)
+animated_df = pd.concat(frames_list)
+
+# Plotting the Stacked Bar Chart
+fig = px.bar(animated_df, x="Month_Year", y="Sales", color="Category",
+             animation_frame="Frame", 
+             color_discrete_sequence=['#003366', '#336699', '#99CCFF'],
+             range_y=[0, monthly_data.groupby('Month_Year')['Sales'].sum().max() + 5000])
+
+fig.update_xaxes(type='category', nticks=10)
+fig.update_layout(barmode='stack', plot_bgcolor='white')
+fig.show()
 
 ### 🛠️ Tech Stack Used:
 * **SQL Server:** Data cleaning & complex queries.
